@@ -7,6 +7,8 @@ import { Logo } from '../Logo';
 import { NavMenu } from '../NavMenu';
 import { NavMenuMobile } from '../NavMenuMobile';
 import { BurgerMenu } from '../BurgerMenu';
+import { LoginButton } from '../LoginButton';
+import { SignUpButton } from '../SignUpButton';
 
 export const NAV_ITEMS = [
   {
@@ -66,20 +68,9 @@ export const Navbar = () => {
         <div className='flex items-center justify-between gap-8 text-base'>
           <Logo logo={logo} text={'Nexcent'} />
           <NavMenu />
-
           <div className='space-x-12 hidden lg:flex items-center'>
-            <a
-              href='/'
-              className='hidden lg:flex items-center text-brandPrimary hover:text-gray900'
-            >
-              Login
-            </a>
-            <button
-              className='bg-brandPrimary text-white py-2 px-4 transition-all 
-                duration-300 rounded hover:bg-NeutralDGrey'
-            >
-              Sing up
-            </button>
+            <LoginButton>Login</LoginButton>
+            <SignUpButton>Sign up</SignUpButton>
           </div>
           <BurgerMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
         </div>
